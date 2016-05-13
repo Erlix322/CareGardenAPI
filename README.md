@@ -23,6 +23,15 @@ Therefore I decided to go forth to tier-4!
 > data/database.js to your own configuration
 > In server.js you have to adjust the routes to your own needs and as a consequence you also have to adapt the queries
 
+## Workflow
+
+1. open up the browser and try to open a route which is NOT allowed without a token e.g http://localhost:8080/api/therapists
+   > you will get an error for not having a valid token
+2. goto http://localhost:8080/api/login
+  > here you enter the data of one of your users in your database
+3. if  everthing is alright, you should be able to see a generated token
+4. try again to access http://localhost:8080/api/therapists?token=[your token
+> now everything should be fine
 
 
 

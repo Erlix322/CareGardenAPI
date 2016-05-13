@@ -14,6 +14,7 @@ Therefore I decided to go forth to tier-4!
 ##Usage
 
 1. clone this projekt
+
 > git clone https://github.com/Erlix322/CareGardenAPI.git
 
 2. install Node.js
@@ -25,12 +26,18 @@ Therefore I decided to go forth to tier-4!
 
 ## Workflow
 
-1. open up the browser and try to open a route which is NOT allowed without a token e.g http://localhost:8080/api/therapists
-   > you will get an error for not having a valid token
-2. goto http://localhost:8080/api/login
-  > here you enter the data of one of your users in your database
+1. open up the browser and try to open a route which is NOT allowed without a token e.g http://localhost:8080/api/therapists  
+
+> you will get an error for not having a valid token
+
+2. goto http://localhost:8080/api/login  
+
+> here you enter the data of one of your users in your database  
+
 3. if  everthing is alright, you should be able to see a generated token
-4. try again to access http://localhost:8080/api/therapists?token=[your token
+
+4. try again to access http://localhost:8080/api/therapists?token=[your token]  
+
 > now everything should be fine
 
 

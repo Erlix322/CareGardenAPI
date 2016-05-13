@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  if (!user)
+    a(href="/api/login") Login
+    br
+   
+  if (user)
+    p Herzlich willkommen #{user.name}
+    p Dein Token lautet: #{token}
+    a(href="/logout") Logout

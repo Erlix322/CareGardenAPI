@@ -41,5 +41,23 @@ Therefore I decided to go forth to tier-4!
 > now everything should be fine
 
 
+## Test with command line tool *curl*
+
+**curl --data "username=yourusername&password=yourpassword" http://localhost:8080/api/login**  
+Response:   
+<code> 
+<!DOCTYPE html><html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"><link rel="stylesheet" href="../alf/NodeTest/Authentication/style/style.css"></head><body><p>Herzlich willkommen T0001</p><p>Dein Token lautet: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVDAwMDEiLCJwYXNzd29yZCI6IlRoZXJhcGV1dCIsImlhdCI6MTQ2MzIxMjI1MCwiZXhwIjoxNDYzMjEzNjkwfQ.NyKF4V__k67PTtl3fydN4Bg6VEjKDhii9-WDGBvUy44</p><a href="/logout">Logout</a></body><script src="http://code.jquery.com/jquery.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script></html>
+</code>
+
+**curl -X GET 'http://localhost:8080/api/patients' -d "token=yourtoken"**
+
+Response in case of this repository  
+<code>
+[{"P_ID":"P0001","name":"Brandt","vorname":"Eric","Adresse":"Ericstraße 4","Telefon":"0815/12345","Diagnose":"AOK Plus","Krankenkasse":"Hist","Password":"test"},{"P_ID":"P0002","name":"Brandt","vorname":"Felix","Adresse":"Ericstraße 4","Telefon":"0815/12345","Diagnose":"AOK Plus","Krankenkasse":"Hist"}]
+
+</code>
+
+
+
 
 

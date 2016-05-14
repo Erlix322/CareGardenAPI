@@ -19,8 +19,9 @@ var morgan      = require('morgan');
 var jwt    = require('jsonwebtoken'); // handle tokens
 var config = require('./config'); // config file
 
-
+//Let's add references to our queries and database configuration
 var therapeut = require('./therapeut/therapeut.js');
+var patient = require('./patient/patient.js');
 var us = require('./user/login.js');
 var db = require('./data/database.js');
 
@@ -29,7 +30,7 @@ var port = process.env.PORT || 8080; //the port our app listens to
 
 app.set('superSecret', config.secret); // secret variable
 
-//just for loggin stuff
+//just for logging stuff
 app.use(morgan('dev'));
 //body parser gives us information of the post and get headers
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -132,6 +133,9 @@ apiRoutes.get('/therapists', function(req, res) {
   therapeut.getTherapists(res);
 });   
 
+apiRoutes.get('/patients', function(req,res){
+  patient.getPatients(res);
+});
 //##########################################
 //#     End of defining our secured routes #
 //##########################################

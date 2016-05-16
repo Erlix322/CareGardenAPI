@@ -1,3 +1,3 @@
 module.exports = {
-    'secret': 'anewSecretIsimmergut'
+    'secret': 'anewSecretIsimmergut' //of course you should change that password
 };

@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Since my professor for software engineering was recently talking about common software architectures, I decided to dive into the world of Node.js.
+Since my software engineering professor was recently talking about common software architectures, I decided to dive into the world of Node.js.
 This little RESTful service is the result of the last week and I'd like to share this code with you guys!
 
 ## Aim of this Work
